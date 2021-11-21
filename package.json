@@ -1,0 +1,21 @@
+{
+  "name": "nyawer-hook",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "keywords": [
+    "saweria",
+    "api",
+    "webhook"
+  ],
+  "author": "JadlionHD (jadlion.dev@gmail.com)",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.24.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1"
+  }
+}
