@@ -4,17 +4,18 @@ const axios = require("axios");
 // contoh request ke servernya
 module.exports.test = () => {
 	axios({
-		url: `http://localhost:3000/test?secret=${process.env.SECRET}`,
+		url: `http://localhost:3000/callback/discord?secret=${process.env.SECRET}`,
 		method: "post",
 		data: {
 			message: "anda hebat!",
-			duit: "1",
-			nama: "udin"
+			amount_raw: 1,
+			donator_name: "udin",
+			type: "donation"
 		}
 	}).then((res) => {
-		console.log(res.status);
+		console.log(res);
 	}).catch((err) => {
-		console.log(err.status);
+		console.log(err);
 	})
 }
 
