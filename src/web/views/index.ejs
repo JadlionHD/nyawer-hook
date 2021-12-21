@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+	<title>Saweria - Hook</title>
+</head>
+<body>
+	<div class="main">
+		<div class="container">
+			<h2>Nyawer-hook Embed Editor</h2>
+			<form action="/edit/embed" method="post" target="_self" id="main-form">
+
+				<div class="mb-3">
+					<label for="titleCheckbox">Title</label><br>
+					<input type="text" class="form-control" id="titleEmbed" name="title" placeholder="Hai shikikan" maxlength="256" value="<%=embed.title%>">
+				</div>
+
+				<div class="mb-3">
+					<label for="descCheckbox">Description</label><br>
+					<textarea class="form-control" id="descEmbed" name="description" rows="3" placeholder="Shikikan-san you got some donation" maxlength="4096"><%=embed.description%></textarea>
+				</div>
+
+				<div class="row">
+					<div class="col">
+						<label for="footerCheckbox">Footer Text</label><br>
+						<input type="text" class="form-control" id="footerEmbed" name="footerText" placeholder="Sankyuu~!" maxlength="2048" value="<%=embed.footer.text%>">				
+					</div>
+
+					<div class="col">
+						<label for="imageUrlCheckbox">Image URL</label><br>
+						<input type="text" class="form-control" id="imageEmbed" name="imageUrl" placeholder="https://example.com/image.jpg" value="<%=embed.image.url%>">				
+					</div>
+
+					<div class="col">
+						<label for="thumbnailCheckbox">Thumbnail URL</label><br>
+						<input type="text" class="form-control" id="thumbnailEmbed" name="thumbnailUrl" placeholder="https://example.com/image.jpg" value="<%=embed.thumbnail.url%>"><br>
+					</div>					
+				</div>
+
+				<div class="mb-3">
+					<label for="secretToken">Token (<a href="#" style="text-decoration: none;" data-bs-toggle="tooltip" data-bs-placement="top" title="You can find the token from environment variable (.env)">?</a>)</label>
+					<input type="password" class="form-control" id="secretToken" name="token" placeholder="Your Secret Token">
+				</div>
+
+				<div class="mb-3">
+					<label for="colorCheckbox">Embed Color</label><br>
+					<input type="color" id="colorEmbed" name="color" value="<%=embed.color%>">		
+				</div>
+
+				<input type="submit" value="Save" class="btn btn-primary">
+			</form>
+		</div>
+		<footer class="pfooter">
+			<h4>Made with <a href="#" class="heartd">&#10084;</a> <a href="https://github.com/JadlionHD" style="text-decoration: none; color: white; font-size: 25px;">JadlionHD</a></h4>
+		</footer>
+	</div>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	<script>
+		var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+		var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+		  return new bootstrap.Tooltip(tooltipTriggerEl)
+		})
+	</script>
+
+</body>
+</html>

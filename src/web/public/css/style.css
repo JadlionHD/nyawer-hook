@@ -1,0 +1,39 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Century Gothic Bold", sans-serif;
+	color: white;
+}
+
+.main {
+	background-color: #151515;
+	padding-top: 2rem;
+}
+
+#titleEmbed {
+	width: 50%;
+}
+#descEmbed {
+	width: 75%;
+}
+
+.container {
+	background-color: #525252;
+	padding: 1.5rem;
+	border-radius: 10px;
+}
+
+.pfooter {
+	padding: 1rem;
+	text-align: center;
+}
+
+.heartd {
+	text-decoration: none;
+	color: white;
+	transition: 0.3s;
+}
+
+.heartd:hover {
+	color: red;
+}

@@ -1,0 +1,18 @@
+{
+  "embeds": [
+    {
+      "title": "Sankyu {donator_name}! telah nyawer Rp{amount}",
+      "description": "Pesan: ```{message}```",
+      "image": {
+        "url": "https://c.tenor.com/z89eTLYza68AAAAd/yuudachi-poi.gif"
+      },
+      "thumbnail": {
+        "url": "https://saweria.co/twitter_card.png"
+      },
+      "footer": {
+        "text": "https://saweria.co/JadlionHD"
+      },
+      "color": "#d41138"
+    }
+  ]
+}
